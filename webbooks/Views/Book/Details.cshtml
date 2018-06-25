@@ -1,0 +1,72 @@
+﻿@model webbooks.Models.Book
+
+@{
+    ViewBag.Title = "Detalhes do livro";
+}
+
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Detalhes do livro</h2>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-lg-8">
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.autor_fk)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.autor_fk.nome)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.isbn)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.isbn)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.titulo)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.titulo)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.ano)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.ano)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.sinopse)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.sinopse)
+                    </dd>
+                </dl>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <div class="row">
+            <div class="col-lg-6 text-left">
+                <br />
+                @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-default" })
+                @Html.ActionLink("Editar", "Edit", new { id = Model.ID }, new { @class = "btn btn-primary" })
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</div>

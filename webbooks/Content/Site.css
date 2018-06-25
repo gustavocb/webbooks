@@ -1,0 +1,13 @@
+﻿.panel-heading {
+    height: 55px;
+}
+
+.table tbody td:first-child {
+    width: 290px;
+    text-align: center;
+}
+
+.table tbody td:first-child a {
+    min-width: 70px;
+    max-width: 70px;
+}
